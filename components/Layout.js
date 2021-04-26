@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className={styles.container}>
       <Head>
         <title>विश्व</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       <header className={styles.header}>
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         </button> */}
       </header>
 
-      <main className={styles.main}>main</main>
+      <main className={styles.main}>{children}</main>
 
       <footer className={styles.footer}>Made with 💗</footer>
     </div>
