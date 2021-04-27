@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
               alt="logo"
               width={30}
               height={30}
-              alt="kuchnahi"
+              alt="vishw"
             />
             <h1>विश्व</h1>
           </div>
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
 
       <main className={styles.main}>{children}</main>
 
-      <footer className={styles.footer}>Made with 💗</footer>
+      <footer className={styles.footer}>Made with 💗 & Next.js</footer>
     </div>
   );
 };

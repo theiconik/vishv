@@ -4,18 +4,15 @@ import {
 } from "@material-ui/icons";
 import styles from "../styles/CountriesTable.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
 const orderBy = (countries, value, direction) => {
   if (direction === "asc") {
-    return [...countries].sort((a, b) =>
-      a[value] > b[value] ? 1 : -1
-    );
+    return [...countries].sort((a, b) => (a[value] > b[value] ? 1 : -1));
   }
 
   if (direction === "desc") {
-    return [...countries].sort((a, b) =>
-      a[value] > b[value] ? -1 : 1
-    );
+    return [...countries].sort((a, b) => (a[value] > b[value] ? -1 : 1));
   }
 
   return countries;
@@ -85,10 +82,12 @@ const CountriesTable = ({ countries }) => {
       </div>
 
       {orderedCountries.map((country) => (
-        <div className={styles.row}>
-          <div className={styles.name}>{country.name}</div>
-          <div className={styles.population}>{country.population}</div>
-        </div>
+        <Link href={`/country/${country.alpha3Code}`}>
+          <div className={styles.row}>
+            <div className={styles.name}>{country.name}</div>
+            <div className={styles.population}>{country.population}</div>
+          </div>
+        </Link>
       ))}
     </div>
   );
