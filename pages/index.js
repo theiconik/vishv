@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 import SearchInput from "../components/SearchInput";
 import CountriesTable from "../components/CountriesTable";
