@@ -34,3 +34,21 @@
   padding-bottom: 20px;
   text-align: center;
 }
+
+.themeSwitcher {
+   border: none;
+   background-color: transparent;
+   padding: 0;
+
+   color: var(--text-color-secondary);
+   margin-right: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   outline: none;
+   transition: transform 100ms ease-out;
+}
+
+.themeSwitcher:active {
+   transform: scale(0.85);
+}

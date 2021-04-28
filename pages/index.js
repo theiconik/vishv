@@ -10,10 +10,11 @@ export default function Home({ countries }) {
 
   const [keyword, setKeyword] = useState("");
 
-  const filteredCountries = countries.filter((country) =>
-    country.name.toLowerCase().includes(keyword) ||
-    country.region.toLowerCase().includes(keyword) ||
-    country.subregion.toLowerCase().includes(keyword)
+  const filteredCountries = countries.filter(
+    (country) =>
+      country.name.toLowerCase().includes(keyword) ||
+      country.region.toLowerCase().includes(keyword) ||
+      country.subregion.toLowerCase().includes(keyword)
   );
 
   const onInputChange = (e) => {
@@ -24,11 +25,16 @@ export default function Home({ countries }) {
 
   return (
     <Layout>
-      <div className={styles.count}>Found {countries.length} countries</div>
-      <SearchInput
-        placeholder="Filter by Name, Region or Sub-region"
-        onChange={onInputChange}
-      />
+      <div className={styles.input_container}>
+        <div className={styles.count}>Found {countries.length} countries</div>
+        <div className={styles.input}>
+          <SearchInput
+            placeholder="Filter by Name, Region or Sub-region"
+            onChange={onInputChange}
+          />
+        </div>
+      </div>
+
       <CountriesTable countries={filteredCountries} />
     </Layout>
   );
