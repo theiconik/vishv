@@ -68,7 +68,7 @@ const CountriesTable = ({ countries }) => {
         >
           <div>Name</div>
 
-          <SortArrow />
+          { value === "name" && <SortArrow direction={direction} />}
         </button>
 
         <button
@@ -77,7 +77,25 @@ const CountriesTable = ({ countries }) => {
         >
           <div>Population</div>
 
-          <SortArrow direction={direction} />
+          { value === "population" && <SortArrow direction={direction} />}
+        </button>
+
+        <button
+          className={styles.heading_area}
+          onClick={() => setValueAndDirection("area")}
+        >
+          <div>Area (km <sup style={{fontSize:"0.5rem"}}>2</sup>)</div>
+
+          { value === "area" &&<SortArrow direction={direction} /> }
+        </button>
+
+        <button
+          className={styles.heading_gini}
+          onClick={() => setValueAndDirection("area")}
+        >
+          <div>Gini</div>
+
+          { value === "gini" &&<SortArrow direction={direction} />}
         </button>
       </div>
 
@@ -86,6 +104,9 @@ const CountriesTable = ({ countries }) => {
           <div className={styles.row}>
             <div className={styles.name}>{country.name}</div>
             <div className={styles.population}>{country.population}</div>
+
+            <div className={styles.area}>{country.area}</div>
+            <div className={styles.gini}>{country.gini}</div>
           </div>
         </Link>
       ))}

@@ -9,7 +9,7 @@
    cursor: pointer;
 }
 
-.heading_name, .heading_population {
+.heading_name, .heading_population, .heading_area, .heading_gini {
    flex: 1;
    padding: 20px;
    color: var(--text-color-secondary);
@@ -55,5 +55,13 @@
 }
 
 .population {
+   flex:1;
+}
+
+.area {
+   flex:1;
+}
+
+.gini {
    flex:1;
 }
